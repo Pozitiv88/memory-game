@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEMORY GAME</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="language-switch" role="radiogroup" aria-label="Language">
+      <label>
+        <input type="radio" name="language" value="en" checked />
+        <span>EN</span>
+      </label>
+
+      <label>
+        <input type="radio" name="language" value="ru" />
+        RU
+      </label>
+
+      <label>
+        <input type="radio" name="language" value="ua" />
+        UA
+      </label>
+
+      <label>
+        <input type="radio" name="language" value="pl" />
+        PL
+      </label>
+    </div>
+
+    <h1 id="gameTitle" class="game-title">Игра на память</h1>
+
+    <p class="moves-counter">
+      <span id="movesLabel">Ходы</span>: <span id="moves">0</span>
+    </p>
+
+    <p class="best-counter">
+      <span id="bestLabel">Рекорд</span>: <span id="bestScore">—</span>
+    </p>
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <p id="gameMessage" class="game-message"></p>
+    <button id="restartButton" class="restart-button" hidden>
+      Сыграть ещё раз
+    </button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

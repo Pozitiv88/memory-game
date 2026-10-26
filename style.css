@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  background-color: black;
+  color: antiquewhite;
+}
+
+.game-title {
+  text-align: center;
+  color: antiquewhite;
+  font-size: clamp(24px, 5vw, 36px);
+  padding-bottom: 24px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(6px, 2vw, 10px);
+
+  width: min(100%, 390px);
+  margin-inline: auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  aspect-ratio: 3 / 4;
+
+  font-size: clamp(20px, 7vw, 32px);
+  cursor: pointer;
+
+  background-color: #292929;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+.card.matched {
+  background-color: #264936;
+  border-color: #4b8b65;
+}
+
+.moves-counter,
+.best-counter {
+  text-align: center;
+  color: antiquewhite;
+  font-size: clamp(14px, 3vw, 18px);
+}
+
+.game-message {
+  text-align: center;
+  color: antiquewhite;
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: bold;
+}
+
+/* <-- Restart --> */
+
+.restart-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+
+  max-width: 100%;
+
+  border: 1px solid #555;
+  border-radius: 10px;
+  background-color: #292929;
+  color: antiquewhite;
+
+  font-size: clamp(14px, 3vw, 16px);
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background-color: #404040;
+}
+
+.restart-button[hidden] {
+  display: none;
+}
+
+/* <-- Language -- >  */
+
+.language-switch {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  width: min(100%, 390px);
+  margin: 0 auto 16px;
+}
+
+.language-switch label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 8px 12px;
+  border: 1px solid #555;
+  border-radius: 8px;
+
+  background-color: #292929;
+  color: antiquewhite;
+
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.language-switch input {
+  accent-color: antiquewhite;
+  cursor: pointer;
+}
+
+.language-switch input:checked + span {
+  font-weight: bold;
+}
